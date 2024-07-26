@@ -3,7 +3,8 @@
     <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
       <div>
         <label for="name">Name:</label>
-        <input type="text" id="name" formControlName="name">
+        <input type="text" id="name" formControlName="name" >
+        
         <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
           Name is required.
         </div>
