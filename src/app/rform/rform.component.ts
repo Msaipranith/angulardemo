@@ -10,6 +10,14 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./rform.component.scss']
 })
 export class RformComponent {
+
+  isDisabled: boolean = true;
+
+  toggleDisabled() {
+    this.isDisabled = false;
+  }
+
+  username:String= '';
   title = 'Reactive Form Example';
   userForm: FormGroup;
 
